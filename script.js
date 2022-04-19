@@ -26,8 +26,11 @@ const render = () => {
 
 const setState = (newState) => {
   state = {...state, ...newState}
-  render()
+  //render()
   // 상태변경 후 리렌더
+  window.requestAnimationFrame(render);
+
 }
 
-render()
+// render()
+window.requestAnimationFrame(render);
